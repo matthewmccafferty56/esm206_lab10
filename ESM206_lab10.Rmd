@@ -1,0 +1,53 @@
+---
+title: "esm206_lab10"
+author: "Matthew McCafferty"
+date: "11/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(usethis)
+library(janitor)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+## Beepr Beeps
+
+Use the function `beep()` in the beepr package to make an audio alert when your code is done running. Beep 4 and 6!!! warcraft
+8 and 3
+
+```{r}
+for(i in rev(1:99)) {
+
+  print(paste(i, "bottles of beer on the wall")) 
+  
+}
+
+beep(4)
+```
+
+## Praise and Cowsay
+
+Packages built with a single purpose: to be kind and fun
+
+```{r}
+praise("${Exclamation},${Exclamation} ${Exclamation}!!!!")
+
+
+praise("Holy ${creating}, Batman - this code is ${ADJECTIVE}")
+```
+
+
+Use cowsay::say() to make a character say something to you
+```{r}
+say("This is awesome", by = "hypnotoad")
+```
+
+cowsay::say(praise("You're doing ${ADJECTIVE} today!!!"), by = "hypnotoad")
+
